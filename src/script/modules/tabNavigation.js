@@ -5,7 +5,7 @@ export default function initTab(){
   const animais=document.querySelectorAll("[data-tab='animais']>li")
   const description = document.querySelectorAll("[data-tab='description']>section")
 
-  animais.forEach((itemli,indice)=>{
+  animais.forEach((itemli, indice)=>{
 
     itemli.addEventListener('click',()=>{
        ativarTab(indice);
