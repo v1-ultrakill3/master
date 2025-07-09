@@ -9,6 +9,7 @@
 }
 .list-curiosidades{
     grid-column: 2/4;
+    padding-right: 30px;
 }
 .list-curiosidades >dt{
     color: var(--cor2);

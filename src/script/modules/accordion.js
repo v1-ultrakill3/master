@@ -3,12 +3,11 @@
 #usa-se o evento de click em cada item que vai ser relacionado ao seu conteúdo.
 */
 export default function initAccordion(){
-     const accordion = document.querySelectorAll("[data-accordion='accordion'] dt");
-        accordion[0].classList.toggle('ativo');
-        accordion[0].nextElementSibling.classList.toggle('ativo');
+     const accordionList = document.querySelectorAll("[data-accordion='accordion'] dt");
+        
 
 
-     accordion.forEach(itemDt => {
+     accordionList.forEach(itemDt => {
          itemDt.addEventListener("mousemove", ()=>itemDt.style.cursor="pointer");
          itemDt.addEventListener("click", accordion);
      })
@@ -19,6 +18,8 @@ export default function initAccordion(){
           /* metodo nextelementsibling : retorna o conteudo html do proximo irmao  */
 
      }
+     accordionList[0].classList.toggle('ativo');
+        accordionList[0].nextElementSibling.classList.toggle('ativo');
 
 
 }
