@@ -13,7 +13,8 @@
     border: none;
     cursor: pointer;
     padding: 10px;
-    color:var(--cor3)
+    color: var(--cor3);
+    user-select: none;/* usado pra impedir do usuario selecione texto  ou outros elementos da pagina */
 }
 .preview{
 
