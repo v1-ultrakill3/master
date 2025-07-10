@@ -2,7 +2,7 @@
     background-color: var(--cor5);
     border: 2px solid var(--cor4);
     border-radius:3px;
-    position: relative;
+    position: absolute;
     
 
 }
