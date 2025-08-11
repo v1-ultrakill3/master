@@ -1,78 +1,63 @@
-.button-mobile{
+.button-mobile {
     display: none;
 }
 
 
-
-
-
-@media (max-width:650px){
-    #menu.ativo{
-        display: block;
-        animation: menuMobile 0.7s forwards;
-    }
-    .button-mobile::before{
-        transform: rotate(90deg);
-    }
-
-
-/* animaçao */
-
 @keyframes menuMobile{
-     from {
-        opacity:0;
-        transform:translate3d(30px,0,0);
-
-     }
-     to{
-        opacity: 1;
+    from {
+        opacity: 0;
+        transform: translate3d(30px,0,0);
+    }
+    to{
+        opacity:1;
         transform: translate3d(-30px,0,0);
-     }
+    }
 }
 
-/* animaçao fim */
-
-
-
-
-    .button-mobile{
-        border-color:var(--cor5);
-        padding: 10px;
-        background:none;
-        color:var(--cor4);
-        border-radius:5px;
-        font-size:1rem;
-        font-family: "IBM Plex Mono",monospace;
-        text-transform: uppercase;
-        font-weight: bold;
-        cursor: pointer;
-        margin:15px;
+@media (max-width: 650px){
+    .button-mobile {
         display: flex;
+        align-items: center;
+        border-color: var(--cor5);
+        padding: 10px;
+        background-color: transparent;
+        color: var(--cor4);
+        border-radius: 5px;
+        font-size: 1rem;
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin: 15px;
         z-index: 2;
         position: relative;
     }
-    .button-mobile::before{
+    
+    .button-mobile::before {
         content: "";
-        display:inline-block;
-        width:12px;
         background-color: var(--cor4);
-        height:3px;
-        box-shadow: 0px 4px var(--cor4),0px -4px var(--cor4) ;
-      
+        display: inline-block;
+        width: 12px;
+        height: 2px;
+        box-shadow: 0px 4px var(--cor4), 0px -4px var(--cor4);
+        transition: transform 0.3s;
     }
-    #menu{
-       
-        /* display:none; */
-        width:170px;
-        background-color: rgba(0,0,0,0.9);
-        box-shadow: 2px 2px 2px 0var(--cor4);
-       z-index: 1;
-       position: absolute;
-        }
-        #menu>li>a{
-            color: var(--cor5);
-        }
 
+    #menu {
+        /* display: none; */
+        width: 170px;
+        background-color: rgba(0, 0, 0, 0.7);
+        box-shadow: 2px 2px 2px 0 var(--cor4);
+        z-index: 1;
+        position: absolute;
+    }
 
-        
+    #menu a {
+        color: var(--cor5);
+    }
+
+    .drop-down-menu {
+        border: none;
+        position: sticky;
+    }
 }
