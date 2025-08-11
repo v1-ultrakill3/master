@@ -7,6 +7,7 @@
 
 
 @media (max-width:650px){
+
     #menu.ativo{
         display: block;
         animation: menuMobile 0.7s forwards;
@@ -31,6 +32,7 @@
 }
 
 /* animaçao fim */
+
 
 
 
@@ -72,7 +74,3 @@
         #menu>li>a{
             color: var(--cor5);
         }
-
-
-        
-}
