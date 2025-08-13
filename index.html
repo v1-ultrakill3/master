@@ -13,12 +13,20 @@
         <!-- Início cabeçalho-->
         <header class="menu">
             <nav>
+
+                <!-- inicio menu mobile -->
+
+                <button class="button-mobile" data-menu="mobile"><!-- Menu --></button>
+                 <!-- fim menu mobile -->
+         
+
                 <!-- menu mobile -->
-                 <button cl></button>
+                
 
 
                  <!-- mobile -->
                 <ul data-menu="List" id="mobile">
+
                     <li><a href="#animais">animais</a></li>
                     <li><a href="#curiosidades">curiosidades</a></li>
                     <li data-dropMenu="menuDrop">
@@ -32,7 +40,10 @@
 
                     </li>
                     <li><a href="#contatos">contato</a></li>
-                    <li><a href="#">login ⇨</a></li>
+                    <li ><a href="login.html" target="_blank" data-modal="abrirModal">login ⇨</a>
+
+                        
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -211,5 +222,24 @@
         <!-- Fim rodapé -->
 
     </div>
+
+
+
+    <!-- modal -->
+      <!-- Início Modal -->
+     <div class="modal-container" data-modal="containerModal">
+        <div class="modal">
+            <button class="button-fecha-modal" data-modal="fechaModal">x</button>
+            <form action="#">
+                <label for="e-mail">E-mail:</label>
+                <input type="email" name="e-mail" id="e-mail" placeholder="Digite seu e-mail">
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+     </div>
+    <!-- Fim Modal -->
+    <!-- modal end -->
 </body>
 </html>
