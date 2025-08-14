@@ -10,7 +10,7 @@ export default function initSlide(){
    nextButton.addEventListener('click',()=> mudarSlide(1));
 
    function updateSlide(){
-    slides.style.transform=`translateX(-${mudarSlide*100})`
+    slides.style.transform=`translateX(-${slideAtivo*100}%)`
     dots.forEach((itemDot, indice)=>{
         itemDot.classList.toggle('ativo', indice === slideAtivo);
     })
@@ -25,6 +25,17 @@ export default function initSlide(){
 
    }
    
+
+   /* auto-slide */
+   setInterval(()=>{
+    const total=document.querySelectorAll('[data-slides="slides"] div').length;
+    slideAtivo=(slideAtivo+1+total)% total;
+    updateSlide();
+
+
+   },3000)
+
+
 }
 
 
