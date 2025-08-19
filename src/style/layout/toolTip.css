@@ -1,0 +1,12 @@
+.tool_tip {
+    background-color: gray;
+    width: 100%;
+    max-width: 170px;
+    position: absolute;
+    padding: 10px;
+    color: var(--cor5);
+    font-size: 0.75rem;
+    font-family: "IBM Plex Mono", monospace;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
